@@ -1,7 +1,7 @@
 <template>
-    <div>
-
-    </div>
+    <header>
+        Header
+    </header>
 </template>
 
 <script>
@@ -10,4 +10,10 @@
     }
 </script>
 
-<style scoped></style>
+<style scoped>
+    header {
+        background-color: black;
+        text-align: center;
+        color: white;
+    }
+</style>

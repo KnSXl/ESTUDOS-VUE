@@ -1,20 +1,25 @@
 <template>
-  <div>
-
-  </div>
+    <HomeView />
 </template>
 
 <script>
+import HomeView from './views/HomeView.vue';
+
 export default {
-  name: 'App',
-  
+    name: 'App',
+
+    components: {
+        HomeView
+    }
 }
 </script>
 
 <style>
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+    text-align: center;
 }
 </style>
