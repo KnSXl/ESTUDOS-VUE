@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <!-- Conteúdo do componente -->
+    <div class="card">
+        TEXTO DO CARD
     </div>
 </template>
 
@@ -10,6 +10,10 @@ export default {
         return {
             // Dados vazios
         }
+    },
+
+    components: {
+        // Componentes
     },
 
     methods: {
@@ -24,22 +28,13 @@ export default {
         // Computeds vazios
     },
 
-    created() {
-        // Hook created vazio
-    },
-
-    mounted() {
-        // Hook mounted vazio
-    },
-
-    updated() {
-        // Hook updated vazio
-    },
-
-    unmounted() {
-        // Hook destroyed vazio
-    }
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.card {
+    background-color: bisque;
+    padding: 10px;
+    border-radius: 10px;
+}
+</style>

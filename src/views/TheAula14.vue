@@ -1,15 +1,26 @@
 <template>
-    <div>
-        <!-- Conteúdo do componente -->
+    <!-- Scoped e global CSS -->
+    
+    <hr>
+    <h1>Aula 14</h1>
+
+    <div class="card">
+        <p>Texto</p>
     </div>
+    <TheCard />
 </template>
 
 <script>
+import TheCard from "@/components/layout/TheCard.vue";
 export default {
     data() {
         return {
             // Dados vazios
         }
+    },
+
+    components: {
+        TheCard,
     },
 
     methods: {
@@ -24,21 +35,6 @@ export default {
         // Computeds vazios
     },
 
-    created() {
-        // Hook created vazio
-    },
-
-    mounted() {
-        // Hook mounted vazio
-    },
-
-    updated() {
-        // Hook updated vazio
-    },
-
-    unmounted() {
-        // Hook destroyed vazio
-    }
 }
 </script>
 
