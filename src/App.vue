@@ -1,63 +1,82 @@
 <template>
-        <Aula1 />
-        <Aula2 />
-        <Aula3 />
-        <Aula4 />
-        <Aula5 />
-        <Aula6 />
-        <Aula7 />
-        <Aula8 />
-        <Aula9 />
-        <Aula10 />
-        <Aula11 />
-        <Aula12 />
-        <Aula13 />
-        <Aula14 />
-        <Aula15 />
-        <Aula16 />
-        <Aula17e18 />
+    <Aula1Introducao />
+    <Aula2Instalando />
+    <Aula3ComponentesDeArquivoUnicoSFC />
+    <Aula4DeclaraçõesCondicionais />
+    <Aula5InstruçõesDeLoops />
+    <Aula6AtributosDinâmicosComDataBinding />
+    <Aula7AtributosClassEStyleDinâmicos />
+    <Aula8LigaçãodeDadosBidirecional />
+    <Aula9Eventos />
+    <Aula10PropriedadeComputada />
+    <Aula11UtilizaObservadores />
+    <Aula12CicloDeVida />
+    <Aula13ComponentesSlot />
+    <Aula14ScopedeGlobal />
+    <Aula15EnviandoDadosParaoComponenteFilho />
+    <Aula16EnviandoDadosDoFilhoParaoPai />
+    <!-- <Aula 17 e 18 Vue Router /> -->
+    <!-- <Aula 19, 20, 21, 22, e 23 Vuex /> -->
+    <Aula24CompositionApiSetup />
+    <Aula25CompositionApiReatividade />
+    <Aula26CompositionApiComputedeWatch />
+    <Aula27ApiCicloDeVida />
+    <Aula28CompositionApiPropseEmit />
+
 </template>
 
 <script>
-import Aula1 from './views/TheAula1.vue';
-import Aula2 from './views/TheAula2.vue';
-import Aula3 from './views/TheAula3.vue';
-import Aula4 from './views/TheAula4.vue';
-import Aula5 from './views/TheAula5.vue';
-import Aula6 from './views/TheAula6.vue';
-import Aula7 from './views/TheAula7.vue';
-import Aula8 from './views/TheAula8.vue';
-import Aula9 from './views/TheAula9.vue';
-import Aula10 from './views/TheAula10.vue';
-import Aula11 from './views/TheAula11.vue';
-import Aula12 from './views/TheAula12.vue';
-import Aula13 from './views/TheAula13.vue';
-import Aula14 from './views/TheAula14.vue';
-import Aula15 from './views/TheAula15.vue';
-import Aula16 from './views/TheAula16.vue';
-import Aula17e18 from './views/TheAula17e18.vue';
+import Aula1Introducao from './views/Aula1Introducao.vue'
+import Aula2Instalando from './views/Aula2Instalando.vue';
+import Aula3ComponentesDeArquivoUnicoSFC from './views/Aula3ComponentesDeArquivoUnicoSFC.vue';
+import Aula4DeclaraçõesCondicionais from './views/Aula4DeclaraçõesCondicionais.vue';
+import Aula5InstruçõesDeLoops from './views/Aula5InstruçõesDeLoops.vue';
+import Aula6AtributosDinâmicosComDataBinding from './views/Aula6AtributosDinâmicosComDataBinding.vue';
+import Aula7AtributosClassEStyleDinâmicos from './views/Aula7AtributosClassEStyleDinâmicos.vue';
+import Aula8LigaçãodeDadosBidirecional from './views/Aula8LigaçãodeDadosBidirecional.vue';
+import Aula9Eventos from './views/Aula9Eventos.vue';
+import Aula10PropriedadeComputada from './views/Aula10PropriedadeComputada.vue';
+import Aula11UtilizaObservadores from './views/Aula11UtilizaObservadores.vue';
+import Aula12CicloDeVida from './views/Aula12CicloDeVida.vue';
+import Aula13ComponentesSlot from './views/Aula13ComponentesSlot.vue';
+import Aula14ScopedeGlobal from './views/Aula14ScopedeGlobal.vue';
+import Aula15EnviandoDadosParaoComponenteFilho from './views/Aula15EnviandoDadosParaoComponenteFilho.vue';
+import Aula16EnviandoDadosDoFilhoParaoPai from './views/Aula16EnviandoDadosDoFilhoParaoPai.vue';
+// Aula 17 e 18 Vue Routes
+// Aula 19, 20, 21, 22, e 23 Vuex
+import Aula24CompositionApiSetup from './views/Aula24CompositionApiSetup.vue';
+import Aula25CompositionApiReatividade from './views/Aula25CompositionApiReatividade.vue'
+import Aula26CompositionApiComputedeWatch from './views/Aula26CompositionApiComputedeWatch.vue'
+import Aula27ApiCicloDeVida from './views/Aula27ApiCicloDeVida.vue'
+import Aula28CompositionApiPropseEmit from './views/Aula28CompositionApiPropseEmit.vue'
 
 export default {
     name: 'App',
 
     components: {
-        Aula1,
-        Aula2,
-        Aula3,
-        Aula4,
-        Aula5,
-        Aula6,
-        Aula7,
-        Aula8,
-        Aula9,
-        Aula10,
-        Aula11,
-        Aula12,
-        Aula13,
-        Aula14,
-        Aula15,
-        Aula16,
-        Aula17e18
+        Aula1Introducao,
+        Aula2Instalando,
+        Aula3ComponentesDeArquivoUnicoSFC,
+        Aula4DeclaraçõesCondicionais,
+        Aula5InstruçõesDeLoops,
+        Aula6AtributosDinâmicosComDataBinding,
+        Aula7AtributosClassEStyleDinâmicos,
+        Aula8LigaçãodeDadosBidirecional,
+        Aula9Eventos,
+        Aula10PropriedadeComputada,
+        Aula11UtilizaObservadores,
+        Aula12CicloDeVida,
+        Aula13ComponentesSlot,
+        Aula14ScopedeGlobal,
+        Aula15EnviandoDadosParaoComponenteFilho,
+        Aula16EnviandoDadosDoFilhoParaoPai,
+        // Aula 17 e 18 Vue Routes,
+        // Aula 19, 20, 21, 22, e 23 Vuex
+        Aula24CompositionApiSetup,
+        Aula25CompositionApiReatividade,
+        Aula26CompositionApiComputedeWatch,
+        Aula27ApiCicloDeVida,
+        Aula28CompositionApiPropseEmit
     }
 }
 </script>

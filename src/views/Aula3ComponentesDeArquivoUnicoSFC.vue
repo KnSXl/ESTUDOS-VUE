@@ -1,7 +1,8 @@
 <template>
-    <!-- Renderiza o cabeçalho por components -->
+    <!-- Componentes de arquivo único SFC -->
 
-    <h1>Aula 1</h1>
+    <hr>
+    <h1>Aula 3 - Componentes de arquivo único SFC</h1>
     <TheHeader />
 </template>
 
