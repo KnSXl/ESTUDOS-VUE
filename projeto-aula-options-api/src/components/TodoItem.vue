@@ -1,23 +1,40 @@
 <template>
+    <!-- Contêiner principal da tarefa -->
     <div class="bg-gray-300 rounded-sm">
+        <!-- Linha da tarefa com borda inferior -->
         <div class="flex items-center px-4 py-3 border-b border-gray-400 last:border-b-0">
+            <!-- Botão para marcar a tarefa como completa/incompleta -->
             <div class="flex items-center justify-center mr-2">
-                <button class="text-gray-400">
+                <button 
+                    :class="{
+                        'text-green-600': isCompleted,
+                        'text-gray-400': !isCompleted
+                    }"
+                    @click="onCheckClick"
+                >
+                    <!-- Ícone de marcação -->
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                 </button>
             </div>
 
+            <!-- Campo de entrada para o título da tarefa -->
             <div class="w-full">
                 <input
+                    v-model="title"
                     type="text"
                     placeholder="Digite a sua tarefa"
-                    :value="todo.title"
                     class="bg-gray-300 placeholder-gray-500 text-gray-700 font-light focus:outline-none block w-full appearance-none leading-normal mr-3"
+                    @keyup.enter="onTitleChange"
                 >
             </div>
 
+            <!-- Botão para deletar a tarefa -->
             <div class="ml-auto flex items-center justify-center">
-                <button class="focus:outline-none">
+                <button
+                    class="focus:outline-none"
+                    @click="onDelete"
+                >
+                    <!-- Ícone de lixeira -->
                     <svg
                         class="ml-3 h-4 w-4 text-gray-500"
                         viewBox="0 0 24 24"
@@ -44,6 +61,47 @@ export default {
         todo: {
             type: Object,
             default: () => ({})
+        }
+    },
+
+    data() {
+        return {
+            // Inicializa o título e o estado de conclusão da tarefa
+            title: this.todo.title,
+            isCompleted: this.todo.completed
+        }
+    },
+
+    methods: {
+        // Método chamado quando o título é alterado
+        onTitleChange() {
+            if (!this.title) {
+                return
+            }
+            this.updateTodo()
+        },
+
+        // Método para atualizar a tarefa
+        updateTodo() {
+            const paylaod = {
+                id: this.todo.id,
+                data: {
+                    title: this.title,
+                    completed: this.isCompleted
+                }
+            }
+            this.$store.dispatch('updateTodo', paylaod)
+        },
+
+        // Método chamado ao clicar no botão de marcação
+        onCheckClick() {
+            this.isCompleted = !this.isCompleted
+            this.updateTodo()
+        },
+
+        // Método chamado ao clicar no botão de deletar
+        onDelete() {
+            this.$store.dispatch('deleteTodo', this.todo.id)
         }
     }
 }

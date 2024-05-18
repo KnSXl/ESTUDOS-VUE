@@ -1,20 +1,24 @@
 <template>
-    <!-- Content -->
+    <!-- Conteúdo principal -->
     <div class="px-3 py-10 md:px-10">
         <div class="w-full sm:w-1/2 lg:w-1/3 mx-auto">
 
+            <!-- Exibe o spinner de carregamento se loading for true -->
             <TodoSpinner v-if="loading" />
 
             <template v-else>
+                <!-- Formulário para adicionar novas tarefas -->
                 <TodoFormAdd />
 
-                <TodoItems />
+                <!-- Lista de itens de tarefas -->
+                <TodoItems v-if="$store.state.todos.length" />
 
-                <TodoEmpty />
+                <!-- Mensagem de lista vazia -->
+                <TodoEmpty v-else />
             </template>
         </div>
     </div>
-    <!--/ Content -->
+    <!--/ Conteúdo principal -->
 </template>
 
 <script>
@@ -22,10 +26,10 @@ import TodoSpinner from './components/TodoSpinner.vue';
 import TodoFormAdd from './components/TodoFormAdd.vue';
 import TodoItems from './components/TodoItems.vue';
 import TodoEmpty from './components/TodoEmpty.vue';
-import axios from 'axios';
 
 export default {
     components: {
+        // Registro dos componentes usados na template
         TodoSpinner,
         TodoFormAdd,
         TodoItems,
@@ -34,20 +38,18 @@ export default {
 
     data() {
         return {
-            todos: [],
+            // Estado de carregamento inicializado como falso
             loading: false,
         }
     },
 
-    async created() {
+    created() {
+        // Define o estado de carregamento como verdadeiro ao criar o componente
         this.loading = true
-        this.todos = await axios.get('http://localhost:3000/todos')
-            .then((response) => {
-                this.$store.commit('storeTodos', response.data)
-            })
-            .finally(() => {
-                this.loading = false
-            })
+        // Despacha a ação para buscar as tarefas e define o estado de carregamento como falso ao terminar
+        this.$store.dispatch('getTodos').finally(() => {
+            this.loading = false
+        })
     },
 }
 </script>
