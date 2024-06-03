@@ -1,5 +1,10 @@
 # aula-17-e-18-vue-router
 
+## Primeira Aplicação
+```
+vue add router
+```
+
 ## Project setup
 ```
 npm install
