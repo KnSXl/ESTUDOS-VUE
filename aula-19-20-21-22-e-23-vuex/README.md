@@ -1,5 +1,10 @@
 # aula-19-20-21-22-e-23-vuex
 
+## Primeira Aplicação
+```
+vue add vuex
+```
+
 ## Project setup
 ```
 npm install
