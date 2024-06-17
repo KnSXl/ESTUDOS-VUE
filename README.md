@@ -1,10 +1,5 @@
 # estudos-vue
 
-## Primeira Aplicação
-```
-vue add vuex
-```
-
 ## Project setup
 ```
 npm install
